@@ -1,48 +1,1247 @@
-$colors: ( primary: #ff9, dd: #dedede);
-$mtb75: 75px 0;
-$ptb75: 75px 0;
-// Colors Name Function
-@function color($colors-name) {
-    @return map-get($colors, $colors-name);
-}
-
 body {
     margin: 0;
     padding: 0;
+    font-size: 16px;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 18px;
-    background-color: color(dd);
 }
 
 
-/* Preloader CSS Start */
+/* Common Css Start */
 
-.preloader {
-    position: absolute;
-    width: 100vh;
-    height: 100vh;
-    top: 0;
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Ubuntu Condensed", sans-serif;
+    margin-top: 0;
+}
+
+.h1,
+h1 {
+    font-size: 50px;
+    line-height: 50px;
+}
+
+.h2,
+h2 {
+    font-size: 40px;
+    line-height: 40px;
+}
+
+.h3,
+h3 {
+    font-size: 30px;
+    line-height: 30px;
+}
+
+.h4,
+h4 {
+    font-size: 20px;
+    line-height: 20px;
+}
+
+section {
+    padding: 70px 0;
+    position: relative;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+
+/*  Background CSS */
+
+.bg-home {
+    background-color: #79236a !important;
+}
+
+.bg-travel-info {
+    background-color: #a81e52 !important;
+}
+
+.bg-tender {
+    background-color: #c43e44 !important;
+}
+
+.bg-gallery {
+    background-color: #e54625 !important;
+}
+
+.bg-about-us {
+    background-color: #564482 !important;
+}
+
+.bg-tickets {
+    background-color: #3e5c88 !important;
+}
+
+.bg-news {
+    background-color: #00a197 !important;
+}
+
+.bg-careers {
+    background-color: #e1a635 !important;
+}
+
+.bg-project {
+    background-color: #1b5eac !important;
+}
+
+.bg-metro {
+    background-color: #007e9e !important;
+}
+
+.bg-finance {
+    background-color: #00996a !important;
+}
+
+.bg-contactus {
+    background-color: #81b050 !important;
+}
+
+.bg-testimonial {
+    background-color: #c4d1dc !important;
+}
+
+.bg-numbers {
+    background-color: #48435b !important;
+}
+
+.bg-black {
+    background-color: #2c3031 !important;
+}
+
+
+/* background CSS End*/
+
+
+/* Color CSS Start */
+
+.text-white {
+    color: #ffffff !important;
+}
+
+.text-black {
+    color: #000000 !important;
+}
+
+
+/* Color CSS End */
+
+
+/* Padding CSS Start */
+
+.p-lg-0 {
+    padding: 0 !important;
+}
+
+.pt-lg-0,
+.py-lg-0 {
+    padding-top: 0 !important;
+}
+
+.pb-lg-0,
+.py-lg-0 {
+    padding-bottom: 0 !important;
+}
+
+.py-lg-70 {
+    padding: 70px 0 !important;
+}
+
+.pt-lg-1,
+.py-lg-1 {
+    padding-top: 0.5em !important;
+}
+
+.pt-lg-2,
+.py-lg-2 {
+    padding-top: 1em !important;
+}
+
+.pt-lg-3,
+.py-lg-3 {
+    padding-top: 1.5em !important;
+}
+
+.pt-lg-4,
+.py-lg-4 {
+    padding-top: 2em !important;
+}
+
+.pt-lg-5,
+.py-lg-5 {
+    padding-top: 2.5em !important;
+}
+
+.pb-lg-1,
+.py-lg-1 {
+    padding-bottom: 0.5em !important;
+}
+
+.pb-lg-2,
+.py-lg-2 {
+    padding-bottom: 1em !important;
+}
+
+.pb-lg-3,
+.py-lg-3 {
+    padding-bottom: 1.5em !important;
+}
+
+.pb-lg-4,
+.py-lg-4 {
+    padding-bottom: 2em !important;
+}
+
+.pb-lg-5,
+.py-lg-5 {
+    padding-bottom: 3em !important;
+}
+
+
+/* Padding CSS End */
+
+
+/* Margin CSS End */
+
+.m-lg-0 {
+    margin: 0 !important;
+}
+
+.mt-lg-0,
+.my-lg-0 {
+    margin-top: 0 !important;
+}
+
+.mb-lg-0,
+.my-lg-0 {
+    margin-bottom: 0 !important;
+}
+
+.mt-lg-1,
+.my-lg-1 {
+    margin-top: 0.5em !important;
+}
+
+.mt-lg-2,
+.my-lg-2 {
+    margin-top: 1em !important;
+}
+
+.mt-lg-3,
+.my-lg-3 {
+    margin-top: 1.5em !important;
+}
+
+.mt-lg-4,
+.my-lg-4 {
+    margin-top: 2em !important;
+}
+
+.mt-lg-5,
+.my-lg-5 {
+    margin-top: 2.5em !important;
+}
+
+.mb-lg-1,
+.my-lg-1 {
+    margin-bottom: 0.5em !important;
+}
+
+.mb-lg-2,
+.my-lg-2 {
+    margin-bottom: 1em !important;
+}
+
+.mb-lg-3,
+.my-lg-3 {
+    margin-bottom: 1.5em !important;
+}
+
+.mb-lg-4,
+.my-lg-4 {
+    margin-bottom: 2em !important;
+}
+
+.mb-lg-5,
+.my-lg-5 {
+    margin-bottom: 2.5em !important;
+}
+
+
+/* Margin CSS End */
+
+.block {
+    display: block !important;
+}
+
+.none {
+    display: none !important;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
     left: 0;
-    background-color: #eee;
-    z-index: 9999;
-    .preloader-text {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.25);
+    position: absolute;
+}
+
+.bg-white {
+    background-color: #fff !important;
+}
+
+.box-shadow {
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Common Css End */
+
+
+/* Header Start */
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+    height: 80px;
+    transition: 0.3s ease;
+    .burger-menu {
+        position: relative;
+        z-index: 1;
+        background-color: #79236a;
+        width: 45px;
+        height: 45px;
+        float: right;
+        border-radius: 50%;
+        .menu {
+            // background-color: #fff;
+            width: 40px;
+            height: 40px;
+            float: right;
+            padding: 20px 10px;
+            // margin: 30px 0 20px 20px;
+            cursor: pointer;
+            // margin-right: 5px;
+            // margin-top: 7px;
+            // border-radius: 50%;
+            span {
+                display: block;
+                // width: 20px;
+                // height: 3px;
+                // padding: 2px;
+                // margin-top: 3px;
+                // border-top: 1px solid #000;
+            }
+            .bar {
+                height: 2px;
+                width: 25px;
+                background-color: #ffffff;
+                display: block;
+                float: right;
+                transition: 0.3s ease;
+            }
+            &:hover .bar2 {
+                width: 25px;
+            }
+            .bar2 {
+                width: 16px;
+            }
+        }
+        .menu.change {
+            margin-top: 3px;
+        }
+        .bar1 {
+            transform: translateY(-6px);
+        }
+        .bar3 {
+            transform: translateY(6px);
+        }
+        .change .bar {
+            background-color: #ffffff;
+        }
+        .change .bar1 {
+            transform: translateY(-1px) rotateZ(-47deg);
+        }
+        .change .bar3 {
+            transform: translateY(-5px) rotate(45deg);
+        }
+        .change .bar2 {
+            opacity: 0;
+        }
+    }
+    .menu-list {
         position: absolute;
+        top: 0;
+        width: 100%;
+        background: #000;
+        transform: translateY(-500%);
+        transition: 0.3s ease;
+        .box-menu {
+            height: 33.33vh;
+            text-align: center;
+            color: #fff;
+            text-transform: uppercase;
+            padding: 7rem 15px;
+        }
+    }
+    .menu-list.change-bg {
+        transform: translateY(0%);
+        position: absolute;
+        top: 0;
+        width: 100%;
+        background: #000;
+        transition: 0.3s ease;
+        height: 100vh;
+        overflow: auto;
+    }
+}
+
+header.float-menu-bg {
+    background-color: #fff;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Header End */
+
+
+/* banner Start */
+
+.carousel-banner {
+    position: relative;
+    width: 100%;
+    height: 95vh;
+    background-color: palegreen;
+    .owl-item {
+        overflow: hidden;
+    }
+    .owl-theme .owl-controls {
+        margin-top: 0px;
+        text-align: center;
+        -webkit-tap-highlight-color: transparent;
+    }
+    .owl-theme .owl-nav [class*="owl-"] {
+        color: white;
+        font-size: 14px;
+        margin: 5px;
+        padding: 4px 7px;
+        /*background-color: #d6d6d6;*/
+        display: inline-block;
+        cursor: pointer;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+    }
+    .owl-theme .owl-nav [class*="owl-"]:hover {
+        /*background-color: #869791;*/
+        color: white;
+        text-decoration: none;
+    }
+    .owl-theme .owl-nav .disabled {
+        opacity: 0.5;
+        cursor: default;
+    }
+    .owl-theme .owl-dots .owl-dot {
+        display: inline-block;
+        zoom: 1;
+        /**display: inline;*/
+    }
+    .owl-theme .owl-dots {
+        bottom: 50px;
+        position: absolute;
+        width: 100%;
+    }
+    /* Dots CSS */
+    .owl-theme .owl-dots .owl-dot {
+        cursor: pointer;
+        height: 16px;
+        margin: 0 16px;
+        position: relative;
+        width: 16px;
+    }
+    .owl-theme .owl-dots {
+        // position: relative;
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        cursor: default;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    /*.owl-theme .owl-dots .owl-dot {
+        position: relative;
+        display: block;
+        float: left;
+        margin: 0 16px;
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+    }
+    */
+    .owl-theme .owl-dots .owl-dot span {
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        text-align: center;
+        outline: none;
+        border-radius: 50%;
+        background-color: #fff;
+        background-color: rgba(255, 255, 255, 0.3);
+        text-indent: -999em;
+        /* make the text accessible to screen readers */
+        cursor: pointer;
+        position: absolute;
+    }
+    .owl-theme .owl-dots .owl-dot span:focus {
+        outline: none;
+    }
+    /* Dot to stroke */
+    .owl-theme .owl-dots .owl-dot span {
+        box-shadow: inset 0 0 0 8px rgba(255, 255, 255, 0.5);
+        -webkit-transition: box-shadow 0.3s ease;
+        transition: box-shadow 0.3s ease;
+    }
+    .owl-theme .owl-dots .owl-dot span:hover,
+    .owl-theme .owl-dots .owl-dot span:focus {
+        box-shadow: inset 0 0 0 8px white;
+    }
+    .owl-theme .owl-dots .owl-dot.active span {
+        box-shadow: inset 0 0 0 2px white;
+    }
+    /* End */
+    .owl-prev,
+    .owl-next {
+        background-repeat: no-repeat;
+        width: 32px;
+        height: 32px;
+        text-indent: -9999px;
+        position: absolute !important;
+        top: 250px !important;
+        transition: all 0.3s ease-in-out;
+    }
+    .owl-prev {
+        background: url(../images/gallery-left-arrow.png);
+        left: 30px;
+    }
+    .owl-next {
+        background: url(../images/gallery-right-arrow.png);
+        right: 30px;
+    }
+    .img-wrapper {
+        width: 100%;
+        height: 95vh;
+        img {
+            height: 100%;
+            min-height: 100%;
+            min-width: 100%;
+            position: absolute;
+            right: 0;
+            width: auto !important;
+        }
+    }
+    .content-wrapper {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 0;
+        color: #fff;
+        transform: translate(0, -50%);
+        h2 {
+            font-size: 50px;
+            line-height: 50px;
+            font-family: "Ubuntu Condensed", sans-serif;
+        }
     }
 }
 
 
-/* Preloader CSS End */
+/* Banner End */
 
-main {
-    section {
-        padding: $ptb75;
+
+/* Plan Journey Start */
+
+#plan-journey {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+    .pos-absolute {
+        position: absolute;
+        top: -55px;
+        left: 0;
+        width: 100%;
+        // z-index: 9;
+        .list-items {
+            background-color: #fff;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
+            padding: 15px;
+            span,
+            a {
+                font-size: 14px;
+                font-weight: 600;
+                letter-spacing: 0.5px;
+                line-height: 1.5;
+                display: block;
+            }
+            a {
+                color: green;
+                &:hover,
+                &:focus {
+                    text-decoration: none;
+                }
+            }
+        }
+        select {
+            background-image: url(../images/arrow.png) !important;
+            background-position: calc(100% - 10px) center;
+            background-repeat: no-repeat;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -ms-appearance: none;
+            border: 1px solid #dfdfdf;
+            font-size: 14px;
+        }
+        select#from option:disabled,
+        select#to option:disabled {
+            background-color: #dddddd;
+            font-weight: 600;
+        }
+        select#from option:nth-of-type(n + 2),
+        select#to option:nth-of-type(n + 2) {
+            color: #800080;
+        }
+        select#from option:nth-of-type(n + 13),
+        select#to option:nth-of-type(n + 13) {
+            color: #37a437;
+        }
+        .metro-map img {
+            position: absolute;
+            right: 0;
+            top: -65px;
+            margin: 0 15px;
+            width: 420px;
+            height: 200px;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
+        }
+        .get-result-details {
+            display: none;
+        }
     }
-    section:nth-child(odd) {
-        background-color: #fff;
+}
+
+
+/* Plan Journey End */
+
+
+/* Media Gallery End */
+
+.media-gallery {
+    .left-media {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 50%;
+        background-color: #e7e7e7;
     }
+    span#counter {
+        display: inline-block;
+        position: absolute;
+        left: -30%;
+        bottom: 0;
+        .big-num {
+            display: inline-block;
+            font-size: 40px;
+        }
+    }
+    .owl-nav {
+        position: absolute;
+        width: 100%;
+        bottom: 10px;
+        left: -20%;
+        .owl-prev,
+        .owl-next {
+            text-indent: -2000px;
+            width: 32px;
+            height: 32px;
+            float: left;
+        }
+        .owl-prev {
+            margin-right: 10px;
+            background: url(../images/gallery-left-arrow.png);
+        }
+        .owl-next {
+            background: url(../images/gallery-right-arrow.png);
+        }
+    }
+}
+
+
+/* Media Gallery End */
+
+
+/* Promo Box Start  */
+
+.promo-box {
+    position: absolute;
+    width: 75%;
+    left: 25%;
+    z-index: 1;
+    .promo-text {
+        padding: 0.5em 1em;
+        color: #fff;
+        font-size: 22px;
+        font-weight: 600;
+    }
+}
+
+
+/* Promo Box End  */
+
+
+/* Testimonial Start */
+
+.testimonial {
+    .testimonial-banner {
+        .owl-prev,
+        .owl-next {
+            background-repeat: no-repeat;
+            width: 32px;
+            height: 32px;
+            text-indent: -9999px;
+            position: absolute !important;
+            top: 250px !important;
+            transition: all 0.3s ease-in-out;
+        }
+        .owl-prev {
+            background: url(../images/gallery-left-arrow.png);
+            left: 30px;
+        }
+        .owl-next {
+            background: url(../images/gallery-right-arrow.png);
+            right: 30px;
+        }
+        p {
+            font-size: 22px;
+        }
+    }
+}
+
+
+/* Testimonial End */
+
+
+/* Numbers Start */
+
+.numbers {
+    h2 {
+        margin: 30px 0 10px;
+    }
+}
+
+
+/* Numbers End */
+
+
+/* Footer Start */
+
+footer {}
+
+
+/* Footer End */
+
+@media screen and (max-width: 1024px) {
+    /* Common Css Start */
+    .h1 {
+        font-size: 70px;
+        line-height: 70px;
+    }
+    .h2 {
+        font-size: 60px;
+        line-height: 60px;
+    }
+    .h3 {
+        font-size: 50px;
+        line-height: 50px;
+    }
+    .h4 {
+        font-size: 40px;
+        line-height: 40px;
+    }
+    /* Padding CSS Start */
+    .p-md-0 {
+        padding: 0 !important;
+    }
+    .pt-md-0,
+    .py-md-0 {
+        padding-top: 0 !important;
+    }
+    .pb-md-0,
+    .py-md-0 {
+        padding-bottom: 0 !important;
+    }
+    .py-md-70 {
+        padding: 70px 0 !important;
+    }
+    .pt-md-1,
+    .py-md-1 {
+        padding-top: 0.5em !important;
+    }
+    .pt-md-2,
+    .py-md-2 {
+        padding-top: 1em !important;
+    }
+    .pt-md-3,
+    .py-md-3 {
+        padding-top: 1.5em !important;
+    }
+    .pt-md-4,
+    .py-md-4 {
+        padding-top: 2em !important;
+    }
+    .pt-md-5,
+    .py-md-5 {
+        padding-top: 2.5em !important;
+    }
+    .pb-md-1,
+    .py-md-1 {
+        padding-bottom: 0.5em !important;
+    }
+    .pb-md-2,
+    .py-md-2 {
+        padding-bottom: 1em !important;
+    }
+    .pb-md-3,
+    .py-md-3 {
+        padding-bottom: 1.5em !important;
+    }
+    .pb-md-4,
+    .py-md-4 {
+        padding-bottom: 2em !important;
+    }
+    .pb-md-5,
+    .py-md-5 {
+        padding-bottom: 3em !important;
+    }
+    /* Padding CSS End */
+    /* margin CSS End */
+    .m-md-0 {
+        margin: 0 !important;
+    }
+    .mt-md-0,
+    .my-md-0 {
+        margin-top: 0 !important;
+    }
+    .mb-md-0,
+    .my-md-0 {
+        margin-bottom: 0 !important;
+    }
+    .mt-md-1,
+    .my-md-1 {
+        margin-top: 0.5em !important;
+    }
+    .mt-md-2,
+    .my-md-2 {
+        margin-top: 1em !important;
+    }
+    .mt-lg-3,
+    .my-lg-3 {
+        margin-top: 1.5em !important;
+    }
+    .mt-md-4,
+    .my-md-4 {
+        margin-top: 2em !important;
+    }
+    .mt-md-5,
+    .my-md-5 {
+        margin-top: 2.5em !important;
+    }
+    .mb-md-1,
+    .my-md-1 {
+        margin-bottom: 0.5em !important;
+    }
+    .mb-md-2,
+    .my-md-2 {
+        margin-bottom: 1em !important;
+    }
+    .mb-md-3,
+    .my-md-3 {
+        margin-bottom: 1.5em !important;
+    }
+    .mb-md-4,
+    .my-md-4 {
+        margin-bottom: 2em !important;
+    }
+    .mb-md-5,
+    .my-md-5 {
+        margin-bottom: 2.5em !important;
+    }
+    /* Margin CSS End */
+    /* Common Css End */
+    /* Carousel Start */
+    .carousel-banner {
+        height: 550px;
+        .img-wrapper {
+            height: 550px;
+        }
+        .content-wrapper {
+            h2 {
+                font-size: 40px;
+                line-height: 40px;
+            }
+        }
+    }
+    /* Carousel End */
+    /* Plan Journey Start */
+    #plan-journey {
+        position: relative;
+        .pos-absolute {
+            position: relative;
+            top: 0;
+            .metro-map img {
+                display: none;
+            }
+        }
+    }
+    /* Plan Journey End */
+    /* Media Gallery End */
+    .media-gallery {
+        span#counter {
+            position: relative;
+            left: -80px;
+        }
+        .owl-nav {
+            position: relative;
+            width: auto;
+            bottom: -20px;
+            left: 80px;
+        }
+    }
+    /* Media Gallery End */
+}
+
+@media screen and (max-width: 992px) {
+    /* Common Css Start*/
+    /* Padding CSS Start */
+    .p-sm-0 {
+        padding: 0 !important;
+    }
+    .pt-sm-0,
+    .py-sm-0 {
+        padding-top: 0 !important;
+    }
+    .pb-sm-0,
+    .py-sm-0 {
+        padding-bottom: 0 !important;
+    }
+    .py-sm-70 {
+        padding: 70px 0 !important;
+    }
+    .pt-sm-1,
+    .py-sm-1 {
+        padding-top: 0.5em !important;
+    }
+    .pt-sm-2,
+    .py-sm-2 {
+        padding-top: 1em !important;
+    }
+    .pt-sm-3,
+    .py-sm-3 {
+        padding-top: 1.5em !important;
+    }
+    .pt-sm-4,
+    .py-sm-4 {
+        padding-top: 2em !important;
+    }
+    .pt-sm-5,
+    .py-sm-5 {
+        padding-top: 2.5em !important;
+    }
+    .pb-sm-1,
+    .py-sm-1 {
+        padding-bottom: 0.5em !important;
+    }
+    .pb-sm-2,
+    .py-sm-2 {
+        padding-bottom: 1em !important;
+    }
+    .pb-sm-3,
+    .py-sm-3 {
+        padding-bottom: 1.5em !important;
+    }
+    .pb-sm-4,
+    .py-sm-4 {
+        padding-bottom: 2em !important;
+    }
+    .pb-sm-5,
+    .py-sm-5 {
+        padding-bottom: 3em !important;
+    }
+    /* Padding CSS End */
+    /* Margin CSS End */
+    .m-sm-0 {
+        margin: 0 !important;
+    }
+    .mt-sm-0,
+    .my-sm-0 {
+        margin-top: 0 !important;
+    }
+    .mb-sm-0,
+    .my-sm-0 {
+        margin-bottom: 0 !important;
+    }
+    .mt-sm-1,
+    .my-sm-1 {
+        margin-top: 0.5em !important;
+    }
+    .mt-sm-2,
+    .my-sm-2 {
+        margin-top: 1em !important;
+    }
+    .mt-sm-3,
+    .my-sm-3 {
+        margin-top: 1.5em !important;
+    }
+    .mt-sm-4,
+    .my-sm-4 {
+        margin-top: 2em !important;
+    }
+    .mt-sm-5,
+    .my-sm-5 {
+        margin-top: 2.5em !important;
+    }
+    .mb-sm-1,
+    .my-sm-1 {
+        margin-bottom: 0.5em !important;
+    }
+    .mb-sm-2,
+    .my-sm-2 {
+        margin-bottom: 1em !important;
+    }
+    .mb-sm-3,
+    .my-sm-3 {
+        margin-bottom: 1.5em !important;
+    }
+    .mb-sm-4,
+    .my-sm-4 {
+        margin-bottom: 2em !important;
+    }
+    .mb-sm-5,
+    .my-sm-5 {
+        margin-bottom: 2.5em !important;
+    }
+    /* Margin CSS End */
+    /* Common Css End*/
+    /* Header Start */
+    header {
+        .menu-list {
+            .box-menu {
+                height: 25vh;
+                // padding: 3rem 15px;
+            }
+        }
+    }
+    /* Header End */
+    /* Media Gallery End */
+    .media-gallery {
+        .left-media {
+            width: 100%;
+        }
+        span#counter {
+            left: 30px;
+        }
+        .owl-nav {
+            left: 0;
+            margin-top: 0.5em;
+        }
+    }
+    /* Media Gallery End */
+}
+
+@media screen and (max-width: 767px) {
+    /* Common Css Start */
+    .h1 {
+        font-size: 50px;
+        line-height: 50px;
+    }
+    .h2 {
+        font-size: 40px;
+        line-height: 40px;
+    }
+    .h3 {
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .h4 {
+        font-size: 25px;
+        line-height: 25px;
+    }
+    /* Padding CSS Start */
+    .p-xs-0 {
+        padding: 0 !important;
+    }
+    .pt-xs-0,
+    .py-xs-0 {
+        padding-top: 0 !important;
+    }
+    .pb-xs-0,
+    .py-xs-0 {
+        padding-bottom: 0 !important;
+    }
+    .py-xs-70 {
+        padding: 70px 0 !important;
+    }
+    .pt-xs-1,
+    .py-xs-1 {
+        padding-top: 0.5em !important;
+    }
+    .pt-xs-2,
+    .py-xs-2 {
+        padding-top: 1em !important;
+    }
+    .pt-xs-3,
+    .py-xs-3 {
+        padding-top: 1.5em !important;
+    }
+    .pt-xs-4,
+    .py-xs-4 {
+        padding-top: 2em !important;
+    }
+    .pt-xs-5,
+    .py-xs-5 {
+        margin-top: 2.5em !important;
+    }
+    .pb-xs-1,
+    .py-xs-1 {
+        padding-bottom: 0.5em !important;
+    }
+    .pb-xs-2,
+    .py-xs-2 {
+        padding-bottom: 1em !important;
+    }
+    .pb-xs-3,
+    .py-xs-3 {
+        padding-bottom: 1.5em !important;
+    }
+    .pb-xs-4,
+    .py-xs-4 {
+        padding-bottom: 2em !important;
+    }
+    .pb-xs-5,
+    .py-xs-5 {
+        padding-bottom: 3em !important;
+    }
+    /* Padding CSS End */
+    /* margin CSS End */
+    .m-xs-0 {
+        margin: 0 !important;
+    }
+    .mt-xs-0,
+    .my-xs-0 {
+        margin-top: 0 !important;
+    }
+    .mb-xs-0,
+    .my-xs-0 {
+        margin-bottom: 0 !important;
+    }
+    .mt-xs-1,
+    .my-xs-1 {
+        margin-top: 0.5em !important;
+    }
+    .mt-xs-2,
+    .my-xs-2 {
+        margin-top: 1em !important;
+    }
+    .mt-xs-3,
+    .my-xs-3 {
+        margin-top: 1.5em !important;
+    }
+    .mt-xs-4,
+    .my-xs-4 {
+        margin-top: 2em !important;
+    }
+    .mt-xs-5,
+    .my-xs-5 {
+        margin-top: 2.5em !important;
+    }
+    .mb-xs-1,
+    .my-xs-1 {
+        margin-bottom: 0.5em !important;
+    }
+    .mb-xs-2,
+    .my-xs-2 {
+        margin-bottom: 1em !important;
+    }
+    .mb-xs-3,
+    .my-xs-3 {
+        margin-bottom: 1.5em !important;
+    }
+    .mb-xs-4,
+    .my-xs-4 {
+        margin-bottom: 2em !important;
+    }
+    .mb-xs-5,
+    .my-xs-5 {
+        margin-bottom: 2.5em !important;
+    }
+    /* Margin CSS End */
+    /* Common Css End */
+    /* Carousel Start */
+    .carousel-banner {
+        height: 450px;
+        .img-wrapper {
+            height: 450px;
+        }
+        .content-wrapper {
+            h2 {
+                font-size: 40px;
+                line-height: 40px;
+            }
+        }
+    }
+    /* Carousel End */
+    /* Plan Journey Start */
+    #plan-journey {
+        .pos-absolute {
+            .metro-map {
+                background-color: #fff;
+                img {
+                    position: relative;
+                    top: 0;
+                    left: 0;
+                    margin: 0;
+                    display: none;
+                    box-shadow: none;
+                    border-top: 1px solid #f2f2f2;
+                    border-bottom: 1px solid #f2f2f2;
+                }
+            }
+        }
+    }
+    /* Plan Journey End */
+    /* Promo Box Start  */
+    .promo-box {
+        position: relative;
+        width: 100%;
+        left: 0%;
+        z-index: 0;
+    }
+    /* Promo Box End  */
 }
