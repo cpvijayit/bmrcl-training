@@ -126,6 +126,14 @@ section {
     color: #000000 !important;
 }
 
+.text-number {
+    color: #898192 !important;
+}
+
+.text-purple {
+    color: #79236a !important;
+}
+
 
 /* Color CSS End */
 
@@ -300,6 +308,17 @@ section {
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
 }
 
+.ul-list-items {
+    padding: 0;
+    li {
+        list-style-type: none;
+        margin-bottom: 0.5em;
+        a {
+            color: #aaa;
+        }
+    }
+}
+
 
 /* Common Css End */
 
@@ -390,6 +409,17 @@ header {
             color: #fff;
             text-transform: uppercase;
             padding: 7rem 15px;
+            font-weight: 600;
+            font-size: 20px;
+            img {
+                margin-bottom: 0.5em;
+                position: relative;
+                top: 0;
+                transition: 0.3s ease;
+            }
+            &:hover img {
+                top: -10px;
+            }
         }
     }
     .menu-list.change-bg {
@@ -429,16 +459,16 @@ header.float-menu-bg {
         -webkit-tap-highlight-color: transparent;
     }
     .owl-theme .owl-nav [class*="owl-"] {
-        color: white;
-        font-size: 14px;
-        margin: 5px;
-        padding: 4px 7px;
-        /*background-color: #d6d6d6;*/
-        display: inline-block;
-        cursor: pointer;
-        -webkit-border-radius: 3px;
-        -moz-border-radius: 3px;
-        border-radius: 3px;
+        // color: white;
+        // font-size: 14px;
+        // margin: 5px;
+        // padding: 4px 7px;
+        // /*background-color: #d6d6d6;*/
+        // display: inline-block;
+        // cursor: pointer;
+        // -webkit-border-radius: 3px;
+        // -moz-border-radius: 3px;
+        // border-radius: 3px;
     }
     .owl-theme .owl-nav [class*="owl-"]:hover {
         /*background-color: #869791;*/
@@ -524,21 +554,107 @@ header.float-menu-bg {
     /* End */
     .owl-prev,
     .owl-next {
-        background-repeat: no-repeat;
-        width: 32px;
-        height: 32px;
+        position: absolute;
+        top: 50%;
+        display: block;
+        outline: none;
+        text-align: left;
+        z-index: 1000;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        // background-repeat: no-repeat;
+        // width: 32px;
+        // height: 32px;
         text-indent: -9999px;
-        position: absolute !important;
-        top: 250px !important;
-        transition: all 0.3s ease-in-out;
+        // position: absolute !important;
+        // top: 250px !important;
+        // transition: all 0.3s ease-in-out;
     }
     .owl-prev {
-        background: url(../images/gallery-left-arrow.png);
-        left: 30px;
+        // background: url(../images/gallery-left-arrow.png);
+        left: 0px;
     }
     .owl-next {
-        background: url(../images/gallery-right-arrow.png);
-        right: 30px;
+        // background: url(../images/gallery-right-arrow.png);
+        right: 0px;
+    }
+    /*--------------------*/
+    /* Circle pop */
+    /*--------------------*/
+    .owl-nav div {
+        margin: 0 30px;
+        width: 50px;
+        height: 50px;
+    }
+    .owl-nav div::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: #fff;
+        content: "";
+        opacity: 0;
+        -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+        transition: transform 0.3s, opacity 0.3s;
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+    }
+    .owl-nav .icon-wrap {
+        position: relative;
+        display: block;
+        margin: 10% 0 0 10%;
+        width: 80%;
+        height: 80%;
+        top: -45%;
+    }
+    .owl-nav div.owl-next .icon-wrap {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+    .owl-nav .icon-wrap::before,
+    .owl-nav .icon-wrap::after {
+        position: absolute;
+        left: 25%;
+        width: 3px;
+        height: 50%;
+        background: #fff;
+        content: "";
+        -webkit-transition: -webkit-transform 0.3s, background-color 0.3s;
+        transition: transform 0.3s, background-color 0.3s;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+    .owl-nav .icon-wrap::before {
+        -webkit-transform: translateX(-50%) rotate(30deg);
+        transform: translateX(-50%) rotate(30deg);
+        -webkit-transform-origin: 0 100%;
+        transform-origin: 0 100%;
+    }
+    .owl-nav .icon-wrap::after {
+        top: 50%;
+        -webkit-transform: translateX(-50%) rotate(-30deg);
+        transform: translateX(-50%) rotate(-30deg);
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0;
+    }
+    .owl-nav div:hover::before {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    .owl-nav div:hover .icon-wrap::before,
+    .owl-nav div:hover .icon-wrap::after {
+        background: #c43e44;
+    }
+    .owl-nav div:hover .icon-wrap::before {
+        -webkit-transform: translateX(-50%) rotate(45deg);
+        transform: translateX(-50%) rotate(45deg);
+    }
+    .owl-nav div:hover .icon-wrap::after {
+        -webkit-transform: translateX(-50%) rotate(-45deg);
+        transform: translateX(-50%) rotate(-45deg);
     }
     .img-wrapper {
         width: 100%;
@@ -590,7 +706,7 @@ header.float-menu-bg {
             padding: 15px;
             span,
             a {
-                font-size: 14px;
+                font-size: 16px;
                 font-weight: 600;
                 letter-spacing: 0.5px;
                 line-height: 1.5;
@@ -753,6 +869,7 @@ header.float-menu-bg {
 .numbers {
     h2 {
         margin: 30px 0 10px;
+        font-size: 60px;
     }
 }
 
@@ -762,28 +879,71 @@ header.float-menu-bg {
 
 /* Footer Start */
 
-footer {}
+footer {
+    color: #aaa;
+    //.ft-box-1 {
+    a {
+        color: #aaa;
+        &:hover,
+        &:focus {
+            text-decoration: none;
+        }
+    }
+    //}
+    .ft-box-3 {
+.ft-social {
+    ul.social-icons {
+        padding: 0;
+        li {
+            list-style-type: none;
+            float: left;
+            border: 1px solid #aaa;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            margin-right: 8px;
+            a {
+                padding: 5px 8px;
+                display: inline-block; 
+                &:hover {
+                    color: #aaa;
+                }
+            }            
+            a.fb {
+                padding-left: 12px;
+            }
+        }
+    }
+
+}
+}
+
+}
 
 
 /* Footer End */
 
 @media screen and (max-width: 1024px) {
     /* Common Css Start */
-    .h1 {
-        font-size: 70px;
-        line-height: 70px;
+    .h1,
+    h1 {
+        font-size: 45px;
+        line-height: 45px;
     }
-    .h2 {
-        font-size: 60px;
-        line-height: 60px;
-    }
-    .h3 {
-        font-size: 50px;
-        line-height: 50px;
-    }
-    .h4 {
+    .h2,
+    h2 {
         font-size: 40px;
         line-height: 40px;
+    }
+    .h3,
+    h3 {
+        font-size: 35px;
+        line-height: 35px;
+    }
+    .h4,
+    h4 {
+        font-size: 30px;
+        line-height: 30px;
     }
     /* Padding CSS Start */
     .p-md-0 {
@@ -1073,25 +1233,36 @@ footer {}
         }
     }
     /* Media Gallery End */
+    /* Numbers Start */
+    .numbers {
+        h2 {
+            font-size: 55px;
+        }
+    }
+    /* Numbers End */
 }
 
 @media screen and (max-width: 767px) {
     /* Common Css Start */
-    .h1 {
-        font-size: 50px;
-        line-height: 50px;
-    }
-    .h2 {
+    .h1,
+    h1 {
         font-size: 40px;
         line-height: 40px;
     }
-    .h3 {
+    .h2,
+    h2 {
         font-size: 30px;
         line-height: 30px;
     }
-    .h4 {
+    .h3,
+    h3 {
         font-size: 25px;
         line-height: 25px;
+    }
+    .h4,
+    h4 {
+        font-size: 22px;
+        line-height: 22px;
     }
     /* Padding CSS Start */
     .p-xs-0 {
@@ -1203,6 +1374,15 @@ footer {}
     }
     /* Margin CSS End */
     /* Common Css End */
+    /* Header Start */
+    header {
+        .menu-list {
+            .box-menu {
+                padding: 3rem 15px;
+            }
+        }
+    }
+    /* Header End */
     /* Carousel Start */
     .carousel-banner {
         height: 450px;
@@ -1211,8 +1391,8 @@ footer {}
         }
         .content-wrapper {
             h2 {
-                font-size: 40px;
-                line-height: 40px;
+                font-size: 30px;
+                line-height: 32px;
             }
         }
     }
@@ -1244,4 +1424,12 @@ footer {}
         z-index: 0;
     }
     /* Promo Box End  */
+    /* Numbers Start */
+    .numbers {
+        h2 {
+            margin: 15px 0 0;
+            font-size: 45px;
+        }
+    }
+    /* Numbers End */
 }

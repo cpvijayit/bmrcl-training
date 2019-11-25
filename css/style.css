@@ -118,6 +118,14 @@ section {
   color: #000000 !important;
 }
 
+.text-number {
+  color: #898192 !important;
+}
+
+.text-purple {
+  color: #79236a !important;
+}
+
 /* Color CSS End */
 /* Padding CSS Start */
 .p-lg-0 {
@@ -283,6 +291,19 @@ section {
           box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
 }
 
+.ul-list-items {
+  padding: 0;
+}
+
+.ul-list-items li {
+  list-style-type: none;
+  margin-bottom: 0.5em;
+}
+
+.ul-list-items li a {
+  color: #aaa;
+}
+
 /* Common Css End */
 /* Header Start */
 header {
@@ -384,6 +405,20 @@ header .menu-list .box-menu {
   color: #fff;
   text-transform: uppercase;
   padding: 7rem 15px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+header .menu-list .box-menu img {
+  margin-bottom: 0.5em;
+  position: relative;
+  top: 0;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+header .menu-list .box-menu:hover img {
+  top: -10px;
 }
 
 header .menu-list.change-bg {
@@ -425,6 +460,9 @@ header.float-menu-bg {
     */
   /* Dot to stroke */
   /* End */
+  /*--------------------*/
+  /* Circle pop */
+  /*--------------------*/
 }
 
 .carousel-banner .owl-item {
@@ -435,17 +473,6 @@ header.float-menu-bg {
   margin-top: 0px;
   text-align: center;
   -webkit-tap-highlight-color: transparent;
-}
-
-.carousel-banner .owl-theme .owl-nav [class*="owl-"] {
-  color: white;
-  font-size: 14px;
-  margin: 5px;
-  padding: 4px 7px;
-  /*background-color: #d6d6d6;*/
-  display: inline-block;
-  cursor: pointer;
-  border-radius: 3px;
 }
 
 .carousel-banner .owl-theme .owl-nav [class*="owl-"]:hover {
@@ -534,24 +561,115 @@ header.float-menu-bg {
 
 .carousel-banner .owl-prev,
 .carousel-banner .owl-next {
-  background-repeat: no-repeat;
-  width: 32px;
-  height: 32px;
+  position: absolute;
+  top: 50%;
+  display: block;
+  outline: none;
+  text-align: left;
+  z-index: 1000;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
   text-indent: -9999px;
-  position: absolute !important;
-  top: 250px !important;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
 
 .carousel-banner .owl-prev {
-  background: url(../images/gallery-left-arrow.png);
-  left: 30px;
+  left: 0px;
 }
 
 .carousel-banner .owl-next {
-  background: url(../images/gallery-right-arrow.png);
-  right: 30px;
+  right: 0px;
+}
+
+.carousel-banner .owl-nav div {
+  margin: 0 30px;
+  width: 50px;
+  height: 50px;
+}
+
+.carousel-banner .owl-nav div::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #fff;
+  content: "";
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+}
+
+.carousel-banner .owl-nav .icon-wrap {
+  position: relative;
+  display: block;
+  margin: 10% 0 0 10%;
+  width: 80%;
+  height: 80%;
+  top: -45%;
+}
+
+.carousel-banner .owl-nav div.owl-next .icon-wrap {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.carousel-banner .owl-nav .icon-wrap::before,
+.carousel-banner .owl-nav .icon-wrap::after {
+  position: absolute;
+  left: 25%;
+  width: 3px;
+  height: 50%;
+  background: #fff;
+  content: "";
+  -webkit-transition: -webkit-transform 0.3s, background-color 0.3s;
+  -webkit-transition: background-color 0.3s, -webkit-transform 0.3s;
+  transition: background-color 0.3s, -webkit-transform 0.3s;
+  transition: transform 0.3s, background-color 0.3s;
+  transition: transform 0.3s, background-color 0.3s, -webkit-transform 0.3s;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.carousel-banner .owl-nav .icon-wrap::before {
+  -webkit-transform: translateX(-50%) rotate(30deg);
+  transform: translateX(-50%) rotate(30deg);
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+}
+
+.carousel-banner .owl-nav .icon-wrap::after {
+  top: 50%;
+  -webkit-transform: translateX(-50%) rotate(-30deg);
+  transform: translateX(-50%) rotate(-30deg);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+
+.carousel-banner .owl-nav div:hover::before {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.carousel-banner .owl-nav div:hover .icon-wrap::before,
+.carousel-banner .owl-nav div:hover .icon-wrap::after {
+  background: #c43e44;
+}
+
+.carousel-banner .owl-nav div:hover .icon-wrap::before {
+  -webkit-transform: translateX(-50%) rotate(45deg);
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.carousel-banner .owl-nav div:hover .icon-wrap::after {
+  -webkit-transform: translateX(-50%) rotate(-45deg);
+  transform: translateX(-50%) rotate(-45deg);
 }
 
 .carousel-banner .img-wrapper {
@@ -609,7 +727,7 @@ header.float-menu-bg {
 
 #plan-journey .pos-absolute .list-items span,
 #plan-journey .pos-absolute .list-items a {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   letter-spacing: 0.5px;
   line-height: 1.5;
@@ -764,28 +882,72 @@ header.float-menu-bg {
 /* Numbers Start */
 .numbers h2 {
   margin: 30px 0 10px;
+  font-size: 60px;
 }
 
 /* Numbers End */
 /* Footer Start */
+footer {
+  color: #aaa;
+}
+
+footer a {
+  color: #aaa;
+}
+
+footer a:hover, footer a:focus {
+  text-decoration: none;
+}
+
+footer .ft-box-3 .ft-social ul.social-icons {
+  padding: 0;
+}
+
+footer .ft-box-3 .ft-social ul.social-icons li {
+  list-style-type: none;
+  float: left;
+  border: 1px solid #aaa;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  margin-right: 8px;
+}
+
+footer .ft-box-3 .ft-social ul.social-icons li a {
+  padding: 5px 8px;
+  display: inline-block;
+}
+
+footer .ft-box-3 .ft-social ul.social-icons li a:hover {
+  color: #aaa;
+}
+
+footer .ft-box-3 .ft-social ul.social-icons li a.fb {
+  padding-left: 12px;
+}
+
 /* Footer End */
 @media screen and (max-width: 1024px) {
   /* Common Css Start */
-  .h1 {
-    font-size: 70px;
-    line-height: 70px;
+  .h1,
+  h1 {
+    font-size: 45px;
+    line-height: 45px;
   }
-  .h2 {
-    font-size: 60px;
-    line-height: 60px;
-  }
-  .h3 {
-    font-size: 50px;
-    line-height: 50px;
-  }
-  .h4 {
+  .h2,
+  h2 {
     font-size: 40px;
     line-height: 40px;
+  }
+  .h3,
+  h3 {
+    font-size: 35px;
+    line-height: 35px;
+  }
+  .h4,
+  h4 {
+    font-size: 30px;
+    line-height: 30px;
   }
   /* Padding CSS Start */
   .p-md-0 {
@@ -1064,25 +1226,34 @@ header.float-menu-bg {
     margin-top: 0.5em;
   }
   /* Media Gallery End */
+  /* Numbers Start */
+  .numbers h2 {
+    font-size: 55px;
+  }
+  /* Numbers End */
 }
 
 @media screen and (max-width: 767px) {
   /* Common Css Start */
-  .h1 {
-    font-size: 50px;
-    line-height: 50px;
-  }
-  .h2 {
+  .h1,
+  h1 {
     font-size: 40px;
     line-height: 40px;
   }
-  .h3 {
+  .h2,
+  h2 {
     font-size: 30px;
     line-height: 30px;
   }
-  .h4 {
+  .h3,
+  h3 {
     font-size: 25px;
     line-height: 25px;
+  }
+  .h4,
+  h4 {
+    font-size: 22px;
+    line-height: 22px;
   }
   /* Padding CSS Start */
   .p-xs-0 {
@@ -1194,6 +1365,11 @@ header.float-menu-bg {
   }
   /* Margin CSS End */
   /* Common Css End */
+  /* Header Start */
+  header .menu-list .box-menu {
+    padding: 3rem 15px;
+  }
+  /* Header End */
   /* Carousel Start */
   .carousel-banner {
     height: 450px;
@@ -1202,8 +1378,8 @@ header.float-menu-bg {
     height: 450px;
   }
   .carousel-banner .content-wrapper h2 {
-    font-size: 40px;
-    line-height: 40px;
+    font-size: 30px;
+    line-height: 32px;
   }
   /* Carousel End */
   /* Plan Journey Start */
@@ -1230,5 +1406,11 @@ header.float-menu-bg {
     z-index: 0;
   }
   /* Promo Box End  */
+  /* Numbers Start */
+  .numbers h2 {
+    margin: 15px 0 0;
+    font-size: 45px;
+  }
+  /* Numbers End */
 }
 /*# sourceMappingURL=style.css.map */

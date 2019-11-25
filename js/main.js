@@ -20,11 +20,10 @@ $(document).ready(function() {
 
     /* Hero Banner Script */
     var hero_banner = $("#hero-banner").find(".item").length;
+
     $("#hero-banner").owlCarousel({
         animateOut: "fadeOutRight",
         animateIn: "fadeInLeft",
-        dots: hero_banner > 1 ? false : false,
-        nav: hero_banner > 1 ? true : false,
         touchDrag: hero_banner > 1 ? true : false,
         mouseDrag: hero_banner > 1 ? true : false,
         loop: hero_banner > 1 ? true : false,
@@ -32,16 +31,25 @@ $(document).ready(function() {
         autoplayHoverPause: hero_banner > 1 ? true : false,
         responsive: {
             0: {
-                items: 1
+                items: 1,
+                dots: hero_banner > 1 ? true : false,
+                nav: hero_banner > 1 ? false : false
             },
             768: {
-                items: 1
+                items: 1,
+                dots: hero_banner > 1 ? true : false,
+                nav: hero_banner > 1 ? false : false
             },
-            1000: {
-                items: 1
+            1025: {
+                items: 1,
+                dots: hero_banner > 1 ? false : false,
+                nav: hero_banner > 1 ? true : false
             }
         }
     });
+    $("#hero-banner")
+        .find(".owl-next,.owl-prev")
+        .append("<span class='icon-wrap'></span>");
 
     // $("#hero-banner").on("changed.owl.carousel", function(event) {
     //     var item = event.item.index - 2;
