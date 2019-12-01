@@ -13,11 +13,21 @@ $(document).ready(function() {
     $(window).scroll(function() {
         if ($(this).scrollTop() !== 0) {
             $("header").addClass("float-menu-bg");
+            $(".scroll-top").fadeIn(700);
         } else {
             $("header").removeClass("float-menu-bg");
+            $(".scroll-top").fadeOut(700);
         }
     });
 
+    // Scroll To Top
+    $(".scroll-top").click(function() {
+        $("body,html").animate({
+                scrollTop: 0
+            },
+            300
+        );
+    });
     /* Hero Banner Script */
     var hero_banner = $("#hero-banner").find(".item").length;
 
@@ -75,8 +85,8 @@ $(document).ready(function() {
         //touchDrag: gallery_items_banner > 1 ? true : false,
         //mouseDrag: gallery_items_banner > 1 ? true : false,
         //loop: gallery_items_banner > 1 ? true : false,
-        autoplay: gallery_items_banner > 1 ? 3000 : false,
-        autoplayHoverPause: gallery_items_banner > 1 ? true : false,
+        autoplay: gallery_items_banner > 1 ? false : false,
+        autoplayHoverPause: gallery_items_banner > 1 ? false : false,
         onInitialized: counter,
         onTranslated: counter,
         slideBy: 3,
@@ -111,8 +121,10 @@ $(document).ready(function() {
     }
 
     // Get Result
-    $(".get-details").click(function() {
-        $(".get-result-details").slideToggle("slow");
+    $(".btn-details").click(function() {
+        $(".get-result-details").slideToggle("slow"); 
+        $(".get-details").toggleClass("hidden"); 
+        $(".get-details-close").toggleClass("hidden"); 
     });
 
     // Menu Click
@@ -121,7 +133,7 @@ $(document).ready(function() {
         $(".menu-list > ul").toggleClass("change");
         $(".menu-list").toggleClass("change-bg");
         $("body").toggleClass("overflow-hidden");
-        $(".box-menu").toggleClass("wow animated");
+        $("#menu-list .box-menu").toggleClass("wow animated");
         // $("#plan-journey > .pos-absolute").toggleClass("none");
     });
 
@@ -143,5 +155,11 @@ $(document).ready(function() {
         }
     });
 
+	$("marquee").hover(function () { 
+    this.stop();
+}, function () {
+    this.start();
+});
+	
     // End bracket
 });
