@@ -147,7 +147,7 @@ section {
   color: #79236a !important;
 }
 
-.text-grey {
+.text-gray {
   color: #aaaaaa !important;
 }
 
@@ -405,11 +405,13 @@ header {
   width: 100%;
   top: 0;
   z-index: 2;
-  height: 80px;
+  height: 100px;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
-
+/* header img {
+        max-width: 70%;
+    } */
 header .burger-menu {
   position: relative;
   z-index: 1;
@@ -1106,6 +1108,30 @@ header.float-menu-bg {
 }
 
 /*** /.News Page CSS ****/
+/*** /.About Page CSS ****/
+.management-profile img {
+  -webkit-box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+          box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.management-profile .overlay-box {
+  position: absolute;
+  width: 130%;
+  height: 120%;
+  right: 0;
+  top: -10%;
+  z-index: -1;
+}
+
+.polices img[src*=".svg"] {
+  width: 50px;
+}
+
+.polices .text-white {
+  height: 200px;
+}
+
+/*** /.About Page CSS ****/
 /* Footer Start */
 footer {
   color: #aaa;
@@ -1465,6 +1491,15 @@ footer .ft-box-3 .ft-social ul.social-icons li a.fb {
     font-size: 55px;
   }
   /* Numbers End */
+  /*** /.About Page CSS ****/
+  .management-profile .overlay-box {
+    width: 100%;
+    height: 100%;
+    right: unset;
+    left: 0;
+    top: 0;
+  }
+  /*** /.About Page CSS ****/
 }
 
 @media screen and (max-width: 767px) {
