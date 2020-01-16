@@ -75,5 +75,30 @@ $(document).ready(function() {
         })
         .scroll();
 
+    /* Gallery Carousel */
+    if ($("#gallery-items-banner").length) {
+        var gallery_items_banner = $("#gallery-items-banner").find(".item").length;
+
+        $("#gallery-items-banner").owlCarousel({
+            // animateOut: "fadeOutRight",
+            // animateIn: "fadeInLeft",
+            //smartSpeed: gallery_items_banner > 1 ? 500 : false,
+            dots: gallery_items_banner > 1 ? false : false,
+            nav: gallery_items_banner > 1 ? true : false,
+            //touchDrag: gallery_items_banner > 1 ? true : false,
+            //mouseDrag: gallery_items_banner > 1 ? true : false,
+            //loop: gallery_items_banner > 1 ? true : false,
+            autoplay: gallery_items_banner > 1 ? false : false,
+            autoplayHoverPause: gallery_items_banner > 1 ? false : false,
+            slideBy: 1,
+            items: 1,
+            responsive: {
+                0: {},
+                768: {},
+                1000: {}
+            }
+        });
+    }
+
     // End bracket
 });

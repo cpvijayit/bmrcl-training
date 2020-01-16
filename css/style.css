@@ -412,6 +412,7 @@ header {
   height: 100px;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
+  background-color: #fff;
 }
 
 header .navbar-collapse {
@@ -709,132 +710,25 @@ header.float-menu-bg {
 }
 
 /* Banner End */
-/* Plan Journey Start */
-#plan-journey {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  z-index: 1;
-}
-
-#plan-journey .pos-absolute {
-  position: absolute;
-  top: -55px;
-  left: 0;
-  width: 100%;
-}
-
-#plan-journey .pos-absolute .list-items {
-  background-color: #fff;
-  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
-          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
-  padding: 15px;
-}
-
-#plan-journey .pos-absolute .list-items span,
-#plan-journey .pos-absolute .list-items a {
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  line-height: 1.5;
-  display: inline-block;
-}
-
-#plan-journey .pos-absolute .list-items a {
-  color: green;
-}
-
-#plan-journey .pos-absolute .list-items a:hover, #plan-journey .pos-absolute .list-items a:focus {
-  text-decoration: none;
-}
-
-#plan-journey .pos-absolute select {
-  background-image: url(../images/arrow.png) !important;
-  background-position: calc(100% - 10px) center;
+/* Home page */
+.intro-section {
+  padding-top: 150px;
+  margin-bottom: 85px;
+  background-image: url(../images/building.jpg);
   background-repeat: no-repeat;
-  -webkit-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  border: 1px solid #dfdfdf;
-  font-size: 14px;
-}
-
-#plan-journey .pos-absolute select#from option:disabled,
-#plan-journey .pos-absolute select#to option:disabled {
-  background-color: #dddddd;
-  font-weight: 600;
-}
-
-#plan-journey .pos-absolute select#from option:nth-of-type(n + 2),
-#plan-journey .pos-absolute select#to option:nth-of-type(n + 2) {
-  color: #800080;
-}
-
-#plan-journey .pos-absolute select#from option:nth-of-type(n + 13),
-#plan-journey .pos-absolute select#to option:nth-of-type(n + 13) {
-  color: #37a437;
-}
-
-#plan-journey .pos-absolute .map-relative {
-  position: relative;
-  top: -85px;
-}
-
-#plan-journey .pos-absolute .metro-map img {
-  position: relative;
-  right: 0;
-  top: 0px;
-  width: 420px;
-  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
-          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
-}
-
-#plan-journey .pos-absolute .overlay-map {
-  position: absolute;
-  bottom: 0;
-  left: 0px;
-  right: 0px;
-  top: 0px;
-  background-color: rgba(0, 0, 0, 0.4);
-  overflow: hidden;
+  background-size: cover;
   width: 100%;
-  height: 100%;
-  -webkit-transform: scale(0);
-  transform: scale(0);
-  -webkit-transition: .3s ease;
-  transition: .3s ease;
-  z-index: 99;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-#plan-journey .pos-absolute .overlay-map .m-metro-map {
-  font-size: 40px;
+  height: 700px;
   color: #fff;
+  background-position: center 50px;
 }
 
-#plan-journey .pos-absolute .metro-map a:hover .overlay-map {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+.intro-section p {
+  font-weight: 500;
+  font-size: 20px;
 }
 
-#plan-journey .pos-absolute .get-result-details {
-  display: none;
-}
-
-/* Plan Journey End */
+/* #Home page */
 /* Media Gallery End */
 .media-gallery .left-media {
   position: absolute;
@@ -899,30 +793,29 @@ header.float-menu-bg {
 
 /* Promo Box End  */
 /* Testimonial Start */
-.testimonial .testimonial-banner .owl-prev,
-.testimonial .testimonial-banner .owl-next {
+#gallery-items-banner .owl-prev,
+#gallery-items-banner .owl-next {
   background-repeat: no-repeat;
   width: 32px;
   height: 32px;
   text-indent: -9999px;
   position: absolute !important;
-  top: 250px !important;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
-.testimonial .testimonial-banner .owl-prev {
+#gallery-items-banner .owl-prev {
   background: url(../images/gallery-left-arrow.png);
-  left: 30px;
+  -webkit-transform: translateX(40%);
+          transform: translateX(40%);
+  left: 40%;
 }
 
-.testimonial .testimonial-banner .owl-next {
+#gallery-items-banner .owl-next {
   background: url(../images/gallery-right-arrow.png);
-  right: 30px;
-}
-
-.testimonial .testimonial-banner p {
-  font-size: 22px;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  left: 50%;
 }
 
 /* Testimonial End */

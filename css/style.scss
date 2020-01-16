@@ -426,6 +426,7 @@ header {
     z-index: 2;
     height: 100px;
     transition: 0.3s ease;      
+    background-color: #fff;
     }
 header .navbar-collapse {
     margin: 25px 0;
@@ -440,9 +441,6 @@ header .navbar-default .navbar-nav>li>a#notli, header .dropdown-menu>li>a:focus,
 header .dropdown-menu>.active>a, header .dropdown-menu>.active>a:focus, header .dropdown-menu>.active>a:hover {
     background-color: #79236a;    
 }
-
-
-
 header .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
     color: #000;
     background-color: transparent;
@@ -703,114 +701,24 @@ header.float-menu-bg {
 /* Banner End */
 
 
-/* Plan Journey Start */
+/* Home page */
 
-#plan-journey {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    z-index: 1;
-    .pos-absolute {
-        position: absolute;
-        top: -55px;
-        left: 0;
-        width: 100%;
-        // z-index: 9;
-        .list-items {
-            background-color: #fff;
-            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
-            padding: 15px;
-            span,
-            a {
-                font-size: 16px;
-                font-weight: 600;
-                letter-spacing: 0.5px;
-                line-height: 1.5;
-                display: inline-block;
-            }
-            a {
-                color: green;
-                &:hover,
-                &:focus {
-                    text-decoration: none;
-                }
-            }
-        }
-        select {
-            background-image: url(../images/arrow.png) !important;
-            background-position: calc(100% - 10px) center;
-            background-repeat: no-repeat;
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            -ms-box-sizing: border-box;
-            box-sizing: border-box;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            -ms-appearance: none;
-            border: 1px solid #dfdfdf;
-            font-size: 14px;
-        }
-        select#from option:disabled,
-        select#to option:disabled {
-            background-color: #dddddd;
-            font-weight: 600;
-        }
-        select#from option:nth-of-type(n + 2),
-        select#to option:nth-of-type(n + 2) {
-            color: #800080;
-        }
-        select#from option:nth-of-type(n + 13),
-        select#to option:nth-of-type(n + 13) {
-            color: #37a437;
-        }
-        .map-relative {
-            position: relative;
-            top: -85px;
-        }
-        .metro-map img {
-            position: relative;
-            right: 0;
-            top: 0px;
-            // margin: 0 15px;
-            width: 420px;
-            // height: 200px;
-            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
-        }
-        .overlay-map {
-            position: absolute;
-            bottom: 0;
-            left: 0px;
-            right: 0px;
-            top: 0px;
-            background-color: rgba(0, 0, 0, 0.4);
-            overflow: hidden;
-            width: 100%;
-            height: 100%;
-            -ms-transform: scale(0);
-            -webkit-transform: scale(0);
-            transform: scale(0);
-            transition: .3s ease;
-            z-index: 99;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
-            .m-metro-map {
-                font-size: 40px;
-                color: #fff;
-            }
-        }
-        .metro-map a:hover .overlay-map {
-            transform: scale(1);
-        }
-        .get-result-details {
-            display: none;
-        }
+.intro-section {   
+    padding-top: 150px;
+    margin-bottom: 85px;
+    background-image: url(../images/building.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%; 
+    height: 700px;
+    color: #fff;
+    background-position: center 50px;
+    p {
+        font-weight: 500;
+        font-size: 20px;
     }
 }
-
-
-/* Plan Journey End */
+/* #Home page */
 
 
 /* Media Gallery End */
@@ -881,31 +789,29 @@ header.float-menu-bg {
 
 /* Testimonial Start */
 
-.testimonial {
-    .testimonial-banner {
+//.testimonial {
+    #gallery-items-banner {
         .owl-prev,
         .owl-next {
             background-repeat: no-repeat;
             width: 32px;
             height: 32px;
             text-indent: -9999px;
-            position: absolute !important;
-            top: 250px !important;
+            position: absolute !important; 
             transition: all 0.3s ease-in-out;
         }
         .owl-prev {
             background: url(../images/gallery-left-arrow.png);
-            left: 30px;
+            transform: translateX(40%);
+            left: 40%;
         }
         .owl-next {
             background: url(../images/gallery-right-arrow.png);
-            right: 30px;
-        }
-        p {
-            font-size: 22px;
-        }
+            transform: translateX(50%);
+            left: 50%;
+        } 
     }
-}
+//}
 
 
 /* Testimonial End */
