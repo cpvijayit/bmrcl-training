@@ -45,7 +45,7 @@ $(document).ready(function() {
     $(".dropdown-menu a").on("click", function() {
         var scrollAnchor = $(this).attr("data-scroll"),
             scrollPoint =
-            $('section[data-anchor="' + scrollAnchor + '"]').offset().top - 50;
+            $('section[data-anchor="' + scrollAnchor + '"]').offset().top - 80;
 
         $("body,html").animate({
                 scrollTop: scrollPoint
@@ -62,7 +62,7 @@ $(document).ready(function() {
             var windscroll = $(window).scrollTop();
             if (windscroll >= 0) {
                 $(".wrapper section").each(function(i) {
-                    if ($(this).position().top - 50 <= windscroll - 0) {
+                    if ($(this).position().top - 80 <= windscroll - 0) {
                         $(".dropdown-menu.open li.active").removeClass("active");
                         $(".dropdown-menu.open li")
                             .eq(i)

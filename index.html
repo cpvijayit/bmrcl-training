@@ -17,26 +17,45 @@
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed&display=swap" rel="stylesheet" />
     <!-- Style CSS -->
     <link rel="stylesheet" href="css/style.css" />
-    <title>Namma Metro</title>
+    <title>Namma Metro - Training</title>
 </head>
 
 <body>
     <!-- Header -->
-    <header class="box-shadow ">
+    <header class="box-shadow navbar-fixed-top">
         <section class="header py-lg-0">
-            <article class="container">
+            <article class="container-fluid">
                 <div class="row">
+                    <!-- Top Header -->
+                    <div class="top-nav hidden-md hidden-sm hidden-xs">
+                        <div class="container">
+                            <div class="row">
+                                <img src="images/logo.jpg" alt="" class="metro-logo">
+                                <span class="left-text-nav">
+                                    <span class="block">Bangalore Metro Rail Corporation Ltd</span>
+                                <span>Training Institute </span>
+                                </span>
+                                <span class="right-text-nav">
+                                    <span class="block">Phone: 080-080 25191121</span>
+                                <span>E mail: TRG@bmrc.co.in</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.Top Header -->
 
                     <!-- Navigation -->
-                    <nav class="navbar-custom navbar navbar-default navbar-fixed-top" role="navigation">
+                    <nav class="navbar-custom navbar navbar-default" role="navigation">
                         <div class="container">
                             <div class="navbar-header page-scroll">
                                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
                                 <a class="navbar-brand" href="index.html">
                                     <!-- Desktop and Tablet -->
-                                    <img src="images/logo.svg" alt="" class="hidden-xs" />
-                                    <!-- Mobile -->
-                                    <img src="images/logo-mob.png" alt="" class="visible-xs" />
+                                    <img src="" alt="">
+                                    <span class="text-logo">B</span>
+                                    <span class="text-logo">M</span>
+                                    <span class="text-logo">R</span>
+                                    <span class="text-logo">T</span>
+                                    <span class="text-logo">I</span>
                                 </a>
                             </div>
                             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -44,16 +63,16 @@
                                 <ul class="nav navbar-nav navbar-right">
 
                                     <li class="dropdown">
-                                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">The Institute<span class="caret"></span></a>
+                                        <a href="javascript:void(0);" id="notli" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">The Institute<span class="caret"></span></a>
                                         <ul class="dropdown-menu ">
                                             <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                                             <!--<li class="hidden">
-                          <a class="page-scroll" href="#page-top"></a>
-                      </li>-->
-                                            <li><a href="institute.html#training-institute" data-scroll="training-institute">BMRC Training Institute</a></li>
-                                            <li><a href="institute.html#our-mission" data-scroll="our-mission">Our Mission</a></li>
-                                            <li><a href="institute.html#vision-2021" data-scroll="vision-2021">Vision 2021</a></li>
-                                            <li><a href="institute.html#training-experience" data-scroll="training-experience">Training Experience</a></li>
+                                                        <a class="page-scroll" href="#page-top"></a>
+                                                    </li>-->
+                                            <li><a href="index.html#training-institute" data-scroll="training-institute">BMRC Training Institute</a></li>
+                                            <li><a href="index.html#our-mission" data-scroll="our-mission">Our Mission</a></li>
+                                            <li><a href="index.html#vision-2021" data-scroll="vision-2021">Vision 2021</a></li>
+                                            <li><a href="index.html#training-experience" data-scroll="training-experience">Training Experience</a></li>
                                         </ul>
                                     </li>
                                     <li class="dropdown">
@@ -115,6 +134,7 @@
                                 </ul>
                             </div>
                             <!-- /.navbar-collapse -->
+
                         </div>
                         <!-- /.container -->
                     </nav>
@@ -126,17 +146,20 @@
     <!-- Main -->
     <main>
         <div class="wrapper">
+
+            <!-- Banner -->
+
             <section class="intro-section">
                 <div class="overlay"></div>
                 <article class="container">
                     <div class="row">
                         <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 wow fadeInUp" data-wow-delay="0.3s">
                             <div class="cnt-wrapper">
-                                <h2>Bangalore Metro Rail Corporation Training Institute</h2>
+                                <h2 class="intro-title">Bangalore Metro Rail Corporation Training Institute</h2>
                                 <h3 class="mb-lg-2"><em>Enhancing Engineering Efficiency...</em></h3>
                                 <div class="row">
-                                    <div class="col-lg-7">
-                                        <p>We have succeeded because we’ve stayed true to our core values, Putting Trainees First, Pursuing Excellence, Embracing Change, Acting with Integrity and Serving Our Society.</p>
+                                    <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+                                        <p class="intro-desc">We have succeeded because we’ve stayed true to our core values, Putting Trainees First, Pursuing Excellence, Embracing Change, Acting with Integrity and Serving Our Society.</p>
                                     </div>
                                 </div>
 
@@ -148,7 +171,132 @@
                 </article>
 
             </section>
-        </div>
+            <!-- /.Banner -->
+
+            <section id="training-institute" data-anchor="training-institute" class="pb-lg-0">
+                <article class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="row">
+                                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 mt-lg-3 mb-sm-3 wow fadeInRight" data-wow-delay="0.3s">
+                                    <h2 class="text-purple mb-lg-1">BMRC Training Institude</h2>
+                                    <p>The Training Institute was established on 8th September, 2011.</p>
+                                    <p>The Training Institute is a multi-disciplinary organization specializing in capacity building, consultancy and research support, particularly for the Metro Technology Instituted at a cost of 22 corers with a vision
+                                        Bangalore centre as the International Training hub in Metro Technologies.</p>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mt-lg-3 mb-sm-3 text-center wow fadeInLeft" data-wow-delay="0.3s">
+                                    <h2 class="text-purple mb-lg-1">Testimonial</h2>
+                                    <p>MD's Message</p>
+                                    <span class="block mb-lg-2">– MD's Designation</span>
+                                    <img src="https://s3-ap-south-1.amazonaws.com/kochimetro/wp-content/uploads/2019/10/18062320/MD.-1024x683.jpg" alt="" class="center-block img-responsive img-circle" style="width: 75px; height: 75px;" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <section id="our-mission" data-anchor="our-mission" class="pb-lg-0">
+                <article class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="row">
+
+                                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 mb-sm-3 wow fadeInRight" data-wow-delay="0.3s">
+                                    <h2 class="text-purple mb-lg-1">Our Mission</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam dignissimos, nisi facere quae accusamus error?</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam dignissimos, nisi facere quae accusamus error?</p>
+
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center wow fadeInLeft" data-wow-delay="0.3s">
+                                    <h2 class="text-purple mb-lg-1">Mission Icons</h2>
+                                    <img src="images/img1.jpg" alt="" class="mb-lg-1">
+                                    <img src="images/img1.jpg" alt="" class="mb-lg-1">
+                                    <img src="images/img1.jpg" alt="" class="mb-lg-1">
+                                    <img src="images/img1.jpg" alt="" class="mb-lg-1">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <section id="vision-2021" data-anchor="vision-2021" class="pb-lg-0 wow fadeInUp" data-wow-delay="0.3s">
+                <article class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="row">
+
+                                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 mb-sm-3 wow fadeInRight" data-wow-delay="0.3s">
+                                    <h2 class="text-purple mb-lg-1">Vision 2021</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam dignissimos, nisi facere quae accusamus error?</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam dignissimos, nisi facere quae accusamus error?</p>
+                                </div>
+
+                                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center wow fadeInLeft" data-wow-delay="0.3s">
+                                    <h2 class="text-purple mb-lg-1">Vision Icons</h2>
+                                    <img src="images/img1.jpg" alt="" class="mb-lg-1">
+                                    <img src="images/img1.jpg" alt="" class="mb-lg-1">
+                                    <img src="images/img1.jpg" alt="" class="mb-lg-1">
+                                    <img src="images/img1.jpg" alt="" class="mb-lg-1">
+                                </div>
+                            </div>
+                </article>
+            </section>
+            <section id="training-experience" data-anchor="training-experience" class="wow fadeInUp" data-wow-delay="0.3s">
+                <article class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="row">
+
+                                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 mb-sm-3">
+                                    <h2 class="text-purple mb-lg-1">Training Experience</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam dignissimos, nisi facere quae accusamus error?</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam dignissimos, nisi facere quae accusamus error?</p>
+
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                    <!-- OWL Carousel Start -->
+                                    <div id="gallery-items-banner" class="owl-carousel owl-theme">
+                                        <!-- Item 1 Start -->
+                                        <div class="item">
+                                            <img src="images/placeholder.jpg" alt="" class="mb-lg-2" />
+                                            <div class="text-center">
+                                                <h3 class="mb-lg-1">Heading</h3>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, accusamus.</p>
+                                            </div>
+
+                                        </div>
+                                        <!-- /.Item 1 End -->
+
+                                        <!-- Item 2 Start -->
+                                        <div class="item">
+                                            <img src="images/placeholder.jpg" alt="" class="mb-lg-2" />
+                                            <div class="text-center">
+                                                <h3 class="mb-lg-1">Heading</h3>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, accusamus.</p>
+                                            </div>
+
+                                        </div>
+                                        <!-- /.Item 2 End -->
+
+                                        <!-- Item 3 Start -->
+                                        <div class="item">
+                                            <img src="images/placeholder.jpg" alt="" class="mb-lg-2" />
+                                            <div class="text-center">
+                                                <h3 class="mb-lg-1">Heading</h3>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, accusamus.</p>
+                                            </div>
+
+                                        </div>
+                                        <!-- /.Item 3 End -->
+
+                                        <!-- OWL Carousel End -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </article>
+            </section>
+            </div>
     </main>
     <!-- /.Main -->
 
@@ -172,7 +320,8 @@
                             </div>
                             <div class="ft-cntus">
                                 <p>
-                                    <i class="fa fa-envelope-o" aria-hidden="true"></i> Email: travelhelp@bmrc.co.in
+                                    <i class="fa fa-envelope-o" aria-hidden="true"></i> Email: TRG@bmrc.co.in
+
                                 </p>
                                 <p>
                                     <i class="fa fa-phone" aria-hidden="true"></i> Toll-free Helpline: <span>1800-425-12345</span>
@@ -212,7 +361,8 @@
                                     </div>
                                     <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 ">
                                         <p><em>Our Phone</em></p>
-                                        <p><span>91-80- 2296 9300, 2296 9301</span></p>
+                                        <!-- <p><span>91-80- 2296 9300, 2296 9301</span></p> -->
+                                        <p><span>080-080 25191121</span></p>
                                     </div>
                                 </div>
                                 <p>
@@ -255,6 +405,8 @@
     <script src="js/jquery.js"></script>
     <!-- Bootstrap Js -->
     <script src="js/bootstrap.min.js"></script>
+    <!-- Owl Carousel Js -->
+    <script src="js/owl.carousel.js"></script>
     <!-- WOW.min Js -->
     <script src="js/WOW.min.js"></script>
     <!-- Main Js -->

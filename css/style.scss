@@ -60,8 +60,8 @@ section {
 }
 
 .inner-banner {
-    padding: 160px 0 25px;
-    p {
+    padding: 200px 0 25px;
+    .banner-title {
         color: #ffffff;
         font-size: 50px;
         margin: 0;
@@ -324,7 +324,7 @@ section {
     top: 0;
     bottom: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.3);
     position: absolute;
 }
 
@@ -424,34 +424,97 @@ header {
     width: 100%;
     top: 0;
     z-index: 2;
-    height: 100px;
+    height: auto;
     transition: 0.3s ease;      
     background-color: #fff;
+    .text-logo {
+        font-size: 35px;
+        margin: 25px 0;
+        display: inline-block;
+        color: #ffff;
     }
-header .navbar-collapse {
-    margin: 25px 0;
-}
+    span.text-logo:nth-of-type(1) {
+        color: #e54625;
+    }
+    span.text-logo:nth-of-type(2) {
+        color: #00996a;
+    }
+    span.text-logo:nth-of-type(3) {
+        color: #e1a635;
+    }
+    span.text-logo:nth-of-type(4) {
+        color: #007e9e;
+    }
+    span.text-logo:nth-of-type(5) {
+        color: #00a197;
+    }
+    .navbar-brand {
+        height: auto;
+        padding: 0;
+        margin-left: 0 !important;
+        // margin: 25px 0 0;
+        line-height: 0;
+    }
+    .top-nav {
+        background-color: #fff;
+        // padding: 25px 0;
+        .metro-logo {
+            width: 200px;
+            float: left;
+            margin-left: 15px;
+        }
+        .left-text-nav, .right-text-nav {
+            margin: 8px 0 0 15px;
+            display: inline-block;
+        }
+        .left-text-nav {
+            font-size: 22px;
+            font-weight: 900;
+        }
+        .right-text-nav {
+            float: right;
+            margin: 16px 0;
+        }
+    }
+} 
 header .navbar-default .navbar-nav>li>a {
-    color: #000;
-}
-header .navbar-default .navbar-nav>li>a#notli, header .dropdown-menu>li>a:focus, header .dropdown-menu>li>a:hover {
     color: #fff;
-    background-color: #79236a; 
 }
-header .dropdown-menu>.active>a, header .dropdown-menu>.active>a:focus, header .dropdown-menu>.active>a:hover {
-    background-color: #79236a;    
-}
-header .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+header .navbar-default .navbar-nav>li>a#notli {
+    // color: #fff;
+    // background-color: #79236a; 
     color: #000;
+    background-color: #fff;
+}
+
+header .dropdown-menu>li>a:focus, header .dropdown-menu>li>a:hover {
+    background-color: #79236a;    
+    color: #fff;
+}
+
+header .navbar-default .navbar-nav>li>a:focus, header .navbar-default .navbar-nav>li>a:hover {
+    color: #fff;
+    background-color: transparent;
+}
+
+// header .dropdown-menu>.active>a, header .dropdown-menu>.active>a:focus, header .dropdown-menu>.active>a:hover {
+//     background-color: #79236a;    
+// }
+
+
+header .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+    color: #fff;
     background-color: transparent;
 }
 header .navbar-default {
-    background-color: #ffffff;
+    background-color: #79236a;
     border-color: transparent;
+    margin: 0;
+    border-radius: 0;
 }
 header.float-menu-bg {
-    background-color: #fff;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
+    background-color: #79236a;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
 }
 
 
@@ -704,16 +767,15 @@ header.float-menu-bg {
 /* Home page */
 
 .intro-section {   
-    padding-top: 150px;
-    margin-bottom: 85px;
+    padding-top: 200px;
     background-image: url(../images/building.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%; 
-    height: 700px;
+    height: 100vh;
     color: #fff;
-    background-position: center 50px;
-    p {
+    background-position: center -40px;
+    .intro-desc {
         font-weight: 500;
         font-size: 20px;
     }
@@ -1152,14 +1214,25 @@ footer {
         margin-bottom: 2.5em !important;
     }
     /* Margin CSS End */
+
+
+
+    .inner-banner {
+        padding: 150px 0 25px;        
+    }
+
     /* Common Css End */
     /* #Header Start */
-    /*--------------------------------------------------------------
+/*--------------------------------------------------------------
 # navbar collapse to toogle
 --------------------------------------------------------------*/
 
 .navbar-header {
 	float: none;
+}
+header .navbar-brand { 
+    margin: 0; 
+    padding-left: 15px;
 }
 .navbar-left, .navbar-right {
 	float: none !important;
@@ -1180,7 +1253,7 @@ footer {
 }
 .navbar-nav {
 	float: none!important;
-	margin-top: 7.5px;
+	margin: 7.5px -15px;
 }
 .navbar-nav>li {
 	float: none;
@@ -1194,7 +1267,10 @@ footer {
 }
 .navbar-default .navbar-toggle {
     border-color: transparent;
-    margin-top: 30px;
+    // margin-top: 30px;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
 }
 // .navbar-default .navbar-toggle .icon-bar {
 // 	background-color: #fff;
@@ -1210,12 +1286,21 @@ footer {
 	right: auto;
 }
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
-	background-color: #ffffff;
+	// background-color: #ffffff;
 	border-color: transparent;
-	margin-top: 30px;
+    margin: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
     /* #Header End */
     
+/* Home page */
+.intro-section {        
+    height: auto;
+    background-position: center -60px;     
+}
+/* #Home page */
+
 }
 @media screen and (max-width: 992px) {
     /* Common Css Start*/
@@ -1367,6 +1452,13 @@ footer {
         }
     }
     /* Header End */ 
+
+     /* Home page */
+     .intro-section {        
+        padding-top: 150px;
+        background-position: center 0px;   
+    }
+    /* #Home page */
 
     
 }
@@ -1532,6 +1624,15 @@ footer {
         margin-bottom: 2.5em !important;
     }
     /* Margin CSS End */
+
+    section {
+        padding: 20px 0;
+    }
+    .inner-banner {
+        padding: 100px 0 25px;        
+    }
+
+
     /* Common Css End */
     /* Header Start */
     
@@ -1542,8 +1643,22 @@ footer {
                 padding: 3rem 15px;
             }
         }
+        .navbar-nav .open .dropdown-menu {
+            background-color: #fff;
+        }
+        .navbar-default .navbar-nav .open .dropdown-menu>li>a {            
+            color: #000;
+        }
     }
     /* Header End */
+
+    /* Home page */
+    .intro-section {        
+        .intro-title {
+            line-height: 35px;
+        } 
+    }
+    /* #Home page */
     /* Carousel Start */
     
     .carousel-banner {
